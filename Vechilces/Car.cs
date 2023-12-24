@@ -1,10 +1,12 @@
-﻿namespace HW_GIT_TEAM.Vechilces;
+﻿using System.Drawing;
 
-public class Car : IVechilces
+namespace HW_GIT_TEAM.Vechilces;
+
+public abstract class Car : IVechilces
 {
-    public string Brand {  get; set; }
+    public VechilcesBrands Brand {  get; set; }
     public string Model { get; set; }
-    public string Color { get; set; }
+    public Color Color { get; set; }
     public DateTime DateOfCreating { get; set; } = DateTime.Now;
     public void BreackDown()
     {
