@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace HW_GIT_TEAM.ParselCommon
 {
-    internal class BoxOfParsels
+    internal class BoxOfParsels : ICloneable
     {
+        List<Parsel> parsels;
+
+        BoxOfParsels(BoxOfParsels boxOfParsels)
+        {
+            this.parsels = boxOfParsels.parsels;
+        }
+
+        public object Clone()
+        {
+            BoxOfParsels clone = new BoxOfParsels(this);
+            return clone;
+        }
     }
 }
