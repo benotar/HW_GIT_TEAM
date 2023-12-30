@@ -2,6 +2,6 @@
 
 public interface IDelivery
 {
-    List<Parsel> Parsels { get; set; }
+    List<BoxOfParsels> BoxParsels { get; set; }
     void Delive();
 }
